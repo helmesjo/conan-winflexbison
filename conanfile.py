@@ -74,6 +74,5 @@ class LibnameConan(ConanFile):
         self.copy(pattern="*.h", dst="include", keep_path=False)
 
     def package_info(self):
-        self.cpp_info.libs = tools.collect_libs(self)
         self.env_info.path.append(os.path.join(self.package_folder, "bin"))
         self.env_info.path.append(os.path.join(self.package_folder, "include"))
