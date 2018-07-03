@@ -45,6 +45,8 @@ class LibnameConan(ConanFile):
     def config_options(self):
         if self.settings.os == 'Windows':
             del self.options.fPIC
+            if self.settings.compiler.version <= 12:
+                self.deps_cpp_info.libs.append("legacy_stdio_definitions") # https://msdn.microsoft.com/en-us/library/bb531344.aspx
         else:
             raise ConanException("{} is only supported on Windows.".format(self.name))
 
