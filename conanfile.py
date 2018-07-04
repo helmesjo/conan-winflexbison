@@ -45,8 +45,9 @@ class LibnameConan(ConanFile):
     def config_options(self):
         if self.settings.os == 'Windows':
             del self.options.fPIC
-            if self.settings.compiler.version <= 12:
-                self.deps_cpp_info.libs.append("legacy_stdio_definitions") # https://msdn.microsoft.com/en-us/library/bb531344.aspx
+            version = float(self.settings.compiler.version.value)
+            if version <= 12.0:
+                self.deps_cpp_info.defines.append("snprintf=_snprintf") # "snprintf" not available in older VS (<= VS 2013)
         else:
             raise ConanException("{} is only supported on Windows.".format(self.name))
 
