@@ -1,6 +1,5 @@
-[![Download](https://api.bintray.com/packages/bincrafters/public-conan/winflexbison%3Abincrafters/images/download.svg) ](https://bintray.com/bincrafters/public-conan/winflexbison%3Abincrafters/_latestVersion)
-[![Build Status](https://travis-ci.org/bincrafters/conan-winflexbison.svg?branch=stable%2F2.5.14)](https://travis-ci.org/bincrafters/conan-winflexbison)
-[![Build status](https://ci.appveyor.com/api/projects/status/github/bincrafters/conan-winflexbison?branch=stable%2F2.5.14&svg=true)](https://ci.appveyor.com/project/bincrafters/conan-winflexbison)
+[![Download](https://api.bintray.com/packages/helmesjo/public/winflexbison%3Ahelmesjo/images/download.svg?version=2.5.14%3Atesting) ](https://bintray.com/helmesjo/public/winflexbison%3Ahelmesjo/2.5.14%3Atesting/link)
+[![Build status](https://ci.appveyor.com/api/projects/status/926waxog892o3cvw?svg=true)](https://ci.appveyor.com/project/helmesjo/conan-winflexbison)
 
 [Conan.io](https://conan.io) package recipe for [*winflexbison*](https://sourceforge.net/projects/winflexbison/).
 
