@@ -60,7 +60,7 @@ class LibnameConan(ConanFile):
         os.rename(extracted_dir, self.source_subfolder)
 
     def configure_cmake(self):
-        cmake = CMake(self)
+        cmake = CMake(self, set_cmake_flags=True)
         cmake.configure(build_folder=self.build_subfolder)
         return cmake
 
