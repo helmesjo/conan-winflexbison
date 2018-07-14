@@ -17,7 +17,7 @@ class LibnameConan(ConanFile):
     homepage = "https://sourceforge.net/projects/winflexbison/"
     author = "helmesjo <helmesjo@gmail.com>"
     # Indicates License type of the packaged library
-    license = "MIT"
+    license = "GPLv3"
 
     # Packages the license for the conanfile.py
     exports = ["LICENSE.md"]
