@@ -1,24 +1,25 @@
-[![Download](https://api.bintray.com/packages/helmesjo/public/winflexbison%3Ahelmesjo/images/download.svg?version=2.5.14%3Atesting) ](https://bintray.com/helmesjo/public/winflexbison%3Ahelmesjo/2.5.14%3Atesting/link)
-[![Build status](https://ci.appveyor.com/api/projects/status/926waxog892o3cvw?svg=true)](https://ci.appveyor.com/project/helmesjo/conan-winflexbison)
+[![Download](https://api.bintray.com/packages/helmesjo/public-conan/winflexbison%3Ahelmesjo/images/download.svg) ](https://bintray.com/helmesjo/public-conan/winflexbison%3Ahelmesjo/_latestVersion)
+[![Build Status](https://travis-ci.org/helmesjo/conan-winflexbison.svg?branch=stable%2F2.5.14)](https://travis-ci.org/helmesjo/conan-winflexbison)
+[![Build status](https://ci.appveyor.com/api/projects/status/github/helmesjo/conan-winflexbison?branch=stable%2F2.5.14&svg=true)](https://ci.appveyor.com/project/helmesjo/conan-winflexbison)
 
 [Conan.io](https://conan.io) package recipe for [*winflexbison*](https://sourceforge.net/projects/winflexbison/).
 
 Win flex-bison is a windows port of                     the Flex (the fast lexical analyser) and                     Bison (GNU parser generator).
 
-The packages generated with this **conanfile** can be found on [Bintray](https://bintray.com/bincrafters/public-conan/winflexbison%3Abincrafters).
+The packages generated with this **conanfile** can be found on [Bintray](https://bintray.com/helmesjo/public-conan/winflexbison%3Ahelmesjo).
 
 ## For Users: Use this package
 
 ### Basic setup
 
-    $ conan install winflexbison/2.5.14@bincrafters/stable
+    $ conan install winflexbison/2.5.14@helmesjo/stable
 
 ### Project setup
 
 If you handle multiple dependencies in your project is better to add a *conanfile.txt*
 
     [requires]
-    winflexbison/2.5.14@bincrafters/stable
+    winflexbison/2.5.14@helmesjo/stable
 
     [generators]
     cmake
@@ -31,23 +32,23 @@ Note: It is recommended that you run conan install from a build directory and no
 
 ## For Packagers: Publish this Package
 
-The example below shows the commands used to publish to bincrafters conan repository. To publish to your own conan respository (for example, after forking this git repository), you will need to change the commands below accordingly.
+The example below shows the commands used to publish to helmesjo conan repository. To publish to your own conan respository (for example, after forking this git repository), you will need to change the commands below accordingly.
 
 ## Build and package
 
 The following command both runs all the steps of the conan file, and publishes the package to the local system cache.  This includes downloading dependencies from "build_requires" and "requires" , and then running the build() method.
 
-    $ conan create bincrafters/stable
+    $ conan create helmesjo/stable
 
 
 
 ## Add Remote
 
-    $ conan remote add bincrafters "https://api.bintray.com/conan/bincrafters/public-conan"
+    $ conan remote add helmesjo "https://api.bintray.com/conan/helmesjo/public-conan"
 
 ## Upload
 
-    $ conan upload winflexbison/2.5.14@bincrafters/stable --all -r bincrafters
+    $ conan upload winflexbison/2.5.14@helmesjo/stable --all -r helmesjo
 
 
 ## Conan Recipe License
@@ -55,4 +56,4 @@ The following command both runs all the steps of the conan file, and publishes t
 NOTE: The conan recipe license applies only to the files of this recipe, which can be used to build and package winflexbison.
 It does *not* in any way apply or is related to the actual software being packaged.
 
-[MIT](https://github.com/helmesjo/conan-winflexbison/blob/testing/2.5.14/LICENSE)
+[MIT](https://github.com/helmesjo/conan-winflexbison/blob/stable/2.5.14/LICENSE)
