@@ -1,5 +1,4 @@
 [![Download](https://api.bintray.com/packages/helmesjo/public-conan/winflexbison%3Ahelmesjo/images/download.svg) ](https://bintray.com/helmesjo/public-conan/winflexbison%3Ahelmesjo/_latestVersion)
-[![Build Status](https://travis-ci.org/helmesjo/conan-winflexbison.svg?branch=stable%2F2.5.14)](https://travis-ci.org/helmesjo/conan-winflexbison)
 [![Build status](https://ci.appveyor.com/api/projects/status/github/helmesjo/conan-winflexbison?branch=stable%2F2.5.14&svg=true)](https://ci.appveyor.com/project/helmesjo/conan-winflexbison)
 
 [Conan.io](https://conan.io) package recipe for [*winflexbison*](https://sourceforge.net/projects/winflexbison/).
