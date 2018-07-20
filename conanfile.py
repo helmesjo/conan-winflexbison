@@ -56,7 +56,8 @@ class LibnameConan(ConanFile):
         cmake.build()
 
     def package(self):
-        self.copy(pattern="LICENSE", dst="licenses", src=self.source_subfolder)
+        self.copy(pattern="flex/src/COPYING", dst="licenses/flex", src=self.source_subfolder, keep_path=False)
+        self.copy(pattern="bison/src/COPYING", dst="licenses/bison", src=self.source_subfolder, keep_path=False)
 
         bison_folder = os.path.join(self.source_subfolder, "bison")
         self.copy(pattern="data/*", dst="bin", src=bison_folder)
