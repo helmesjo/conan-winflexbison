@@ -9,8 +9,8 @@ add_custom_command(
     OUTPUT 
     ${BisonOutput_s}
     ${FlexOutput}
-    COMMAND win_bison --defines=${BisonOutput_h} --output=${BisonOutput_s} "${CMAKE_CURRENT_SOURCE_DIR}/snazzle.y"
-    COMMAND win_flex --wincompat --noyywrap --outfile=${FlexOutput} "${CMAKE_CURRENT_SOURCE_DIR}/snazzle.l"
+    COMMAND bison --defines=${BisonOutput_h} --output=${BisonOutput_s} "${CMAKE_CURRENT_SOURCE_DIR}/snazzle.y"
+    COMMAND flex --wincompat --noyywrap --outfile=${FlexOutput} "${CMAKE_CURRENT_SOURCE_DIR}/snazzle.l"
     COMMENT "Generating files"
 )
 

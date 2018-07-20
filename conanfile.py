@@ -60,8 +60,13 @@ class LibnameConan(ConanFile):
         self.copy(pattern="bison/src/COPYING", dst="licenses/bison", src=self.source_subfolder, keep_path=False)
 
         bison_folder = os.path.join(self.source_subfolder, "bison")
-        self.copy(pattern="data/*", dst="bin", src=bison_folder)
-        self.copy(pattern="*.exe", dst="bin", keep_path=False)
+        self.copy(pattern="data/*", dst="bin", src=bison_folder, keep_path=True)
+        self.copy(pattern="*win_flex.exe", dst="bin", keep_path=False)
+        self.copy(pattern="*win_bison.exe", dst="bin", keep_path=False)
+
+        with tools.chdir(os.path.join(self.package_folder, "bin")):
+            os.rename('win_flex.exe', 'flex.exe')
+            os.rename('win_bison.exe', 'bison.exe')
 
     def package_info(self):
         self.env_info.path.append(os.path.join(self.package_folder, "bin"))
