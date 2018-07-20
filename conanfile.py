@@ -16,31 +16,18 @@ class LibnameConan(ConanFile):
     url = "https://github.com/helmesjo/conan-winflexbison"
     homepage = "https://sourceforge.net/projects/winflexbison/"
     author = "helmesjo <helmesjo@gmail.com>"
-    # Indicates License type of the packaged library
     license = "GPLv3"
-
-    # Packages the license for the conanfile.py
     exports = ["LICENSE.md"]
-
-    # Remove following lines if the target lib does not use cmake.
     exports_sources = ["CMakeLists.txt"]
-    generators = "cmake"
 
-    # Options may need to change depending on the packaged library.
+    generators = "cmake"
     settings = "os", "arch", "compiler", "build_type"
     options = {}
     default_options = ""
+    requires = ()
 
-    # Custom attributes for Bincrafters recipe conventions
     source_subfolder = "source_subfolder"
     build_subfolder = "build_subfolder"
-
-    # Use version ranges for dependencies unless there's a reason not to
-    # Update 2/9/18 - Per conan team, ranges are slow to resolve.
-    # So, with libs like zlib, updates are very rare, so we now use static version
-
-
-    requires = ()
 
     def config_options(self):
         if self.settings.os == 'Windows':
@@ -56,7 +43,7 @@ class LibnameConan(ConanFile):
         tools.get("{0}/archive/v{1}.tar.gz".format(source_url, self.version))
         extracted_dir = self.name + "-" + self.version
 
-        #Rename to "source_subfolder" is a convention to simplify later steps
+        # Rename to "source_subfolder" is a convention to simplify later steps
         os.rename(extracted_dir, self.source_subfolder)
 
     def configure_cmake(self):
