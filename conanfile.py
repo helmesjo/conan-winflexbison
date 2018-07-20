@@ -62,7 +62,6 @@ class LibnameConan(ConanFile):
         bison_folder = os.path.join(self.source_subfolder, "bison")
         self.copy(pattern="data/*", dst="bin", src=bison_folder)
         self.copy(pattern="*.exe", dst="bin", keep_path=False)
-        self.copy(pattern="*.h", dst="include", keep_path=False)
 
     def package_info(self):
         self.env_info.path.append(os.path.join(self.package_folder, "bin"))
